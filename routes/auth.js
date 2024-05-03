@@ -25,7 +25,7 @@ router.post('/login', verifyToken, async (req, res) => {
         // Generate a JWT token
         const token = generateToken(user);
 
-        if (verifyToken) ?  :return res.status(401).json({message: 'Invalid token'});
+        // if (verifyToken) ?  :return res.status(401).json({message: 'Invalid token'});
 
         // Send the token in the response
         res.status(200).json({ token });
